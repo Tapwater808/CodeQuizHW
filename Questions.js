@@ -16,7 +16,7 @@ var questions = [
     },
     {
         title: "A very useful tool for used during development and debugging for printing content to the debugger is:",
-        choices: ["Javascript", "terminal / bash", "for loops", "console log"],
+        choices: ["Visual Studio Code", "terminals", "for loops", "console log"],
         answer: "console log"
     },
     {
@@ -35,8 +35,7 @@ var timer = document.querySelector("#startTime");
 // Questions and Wrapper
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
-
-// Seconds left is 15 seconds per question:
+//Penalty and score stuff
 var secondsLeft = 90;
 var holdInterval = 0;
 var penalty = 10;
@@ -72,19 +71,19 @@ function compare(event)
 
         var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
-        // Correct condition goes here
+        // Correct condition goes here          vvv
         if (element.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
         }
-        // Correct condition goes here
+        // Correct condition goes here          ^^^
 
-        // Incorrect condition with penalty goes here
+        // Incorrect condition with penalty goes here       vvv
         else {
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
-        //Incorrect condition with penalty goes here
+        //Incorrect condition with penalty goes here        ^^^
     }
     questionIndex++;
 
