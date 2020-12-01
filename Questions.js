@@ -26,3 +26,19 @@ var questions = [
     },
 
 ];
+// Score Variables
+var score = 0;
+var questionIndex = 0;
+//Timer
+var currentTime = document.querySelector("#currentTime");
+var timer = document.querySelector("#startTime");
+// Questions and Wrapper
+var questionsDiv = document.querySelector("#questionsDiv");
+var wrapper = document.querySelector("#wrapper");
+
+// Seconds left is 15 seconds per question:
+var secondsLeft = 90;
+var holdInterval = 0;
+var penalty = 10;
+
+var ulCreate = document.createElement("ul");
