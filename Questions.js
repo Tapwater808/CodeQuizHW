@@ -41,9 +41,8 @@ var holdInterval = 0;
 var penalty = 10;
 
 var ulCreate = document.createElement("ul");
-
+//Start Quiz button function
 timer.addEventListener("click", function () {
-    // We are checking zero because its originally set to zero
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
