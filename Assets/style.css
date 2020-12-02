@@ -49,6 +49,7 @@
 
     button {
     border-radius: 8px;
+    position: center;
     }
 
     textarea {
@@ -67,7 +68,7 @@
     label {
     margin-right: 10px;
     }
-    
+
     input {
     margin-bottom: 20px;
     width: 50%;
